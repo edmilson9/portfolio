@@ -1,25 +1,11 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import Home from "./composants/Home";
 
-function App() {
+export default function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    // Fond global sombre pour contraster avec le jaune intense
+    <div className="bg-[#0f0e0a] min-h-screen font-sans selection:bg-black selection:text-[#ffcc00]">
+      <Home />
     </div>
   );
 }
-
-export default App;
