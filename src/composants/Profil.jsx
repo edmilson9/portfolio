@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { GraduationCap, Briefcase, Code, Database, Server, Terminal, ShieldCheck, Languages, UserCheck, Settings, Cpu, Layout, Smartphone } from "lucide-react";
+import { GraduationCap, Briefcase, Code, Database, Server, Terminal, ShieldCheck, Languages, UserCheck, Settings, Cpu } from "lucide-react";
 import TimelineCard from "../ui/TimelineCard"; 
 import GoldBackground from "../animation/GoldBackground";
 
@@ -23,13 +23,13 @@ export default function Profil() {
       annee: "2020 - 2022",
       titre: "DUT GEII",
       lieu: "Université Paris Est Créteil",
-      desc: "30 ECTS validés."
+      desc: "Génie Électrique et Informatique Industrielle (30 ECTS validés)."
     },
     {
       annee: "2017 - 2020",
       titre: "Baccalauréat STI2D",
       lieu: "Lycée Polyvalent de Cachan",
-      desc: "Option SIN. Mention Assez Bien."
+      desc: "Mention Assez Bien."
     }
   ];
 
@@ -38,7 +38,7 @@ export default function Profil() {
       annee: "Juillet 2025 - Août 2025",
       titre: "Stage Développeur Fullstack",
       lieu: "E-petit pas, Argenteuil",
-      desc: "Développement d'un espace entreprises : modules d'inscription, publication d'offres, devis, facturation et paiement via API PayPal. Stack : React.js, Node.js, Tailwind, Prisma, Supabase, JWT."
+      desc: "Développement d'un espace entreprises : modules d'inscription, publication d'offres, devis, facturation et paiement via API PayPal. Stack : React.js, Node.js, Tailwind, Prisma, Supabase."
     },
     {
       annee: "Depuis Octobre 2024",
@@ -51,6 +51,57 @@ export default function Profil() {
       titre: "Équipier Polyvalent",
       lieu: "McDonald's, Paris (75007)",
       desc: "Job étudiant."
+    }
+  ];
+
+  const skillGroups = [
+    {
+      title: "Développement Web",
+      icon: <Server size={24} />,
+      skills: ["HTML", "CSS", "JavaScript", "PHP", "Symfony", "Laravel", "React.js", "Node.js", "Tailwind", "FastAPI", "Figma"],
+      size: "md:col-span-8"
+    },
+    {
+      title: "Développement Logiciel",
+      icon: <Code size={24} />,
+      skills: ["Python", "Java (Servlets, JSP)", "C#", "C", "Flutter", "Dart"],
+      size: "md:col-span-4"
+    },
+    {
+      title: "Data Science",
+      icon: <Cpu size={24} />,
+      skills: ["Langage R", "Analyse ACP", "Clustering", "Pandas", "Matplotlib"],
+      size: "md:col-span-4"
+    },
+    {
+      title: "DevOps",
+      icon: <ShieldCheck size={24} />,
+      skills: ["Git", "Docker", "Jenkins", "Linux", "Pytest", "Cypress"],
+      size: "md:col-span-4"
+    },
+    {
+      title: "Base de données",
+      icon: <Database size={24} />,
+      skills: ["MySQL", "PostgreSQL", "MongoDB", "Supabase", "Prisma", "UML"],
+      size: "md:col-span-4"
+    },
+    {
+      title: "Langues",
+      icon: <Languages size={24} />,
+      skills: ["Anglais (C1 TOEIC: 950)", "Portugais (Bilingue)", "Espagnol (B1)"],
+      size: "md:col-span-4"
+    },
+    {
+      title: "Transverses",
+      icon: <Settings size={24} />,
+      skills: ["Agile", "Trello", "Klaxoon", "Gantt", "Droit des contrats"],
+      size: "md:col-span-4"
+    },
+    {
+      title: "Soft Skills",
+      icon: <UserCheck size={24} />,
+      skills: ["Adaptabilité", "Rigueur", "Organisation", "Résilience"],
+      size: "md:col-span-4"
     }
   ];
 
@@ -68,11 +119,9 @@ export default function Profil() {
               <GraduationCap size={28} />
               <h3 className="text-xl md:text-2xl font-bold uppercase tracking-[0.2em] text-white">Académique</h3>
             </div>
-            <div className="space-y-2">
-              {formations.map((item, index) => (
-                <TimelineCard key={index} {...item} delay={index * 0.1} />
-              ))}
-            </div>
+            {formations.map((item, index) => (
+              <TimelineCard key={index} {...item} delay={index * 0.1} />
+            ))}
           </div>
 
           <div>
@@ -80,11 +129,9 @@ export default function Profil() {
               <Briefcase size={28} />
               <h3 className="text-xl md:text-2xl font-bold uppercase tracking-[0.2em] text-white">Professionnel</h3>
             </div>
-            <div className="space-y-2">
-              {experiences.map((item, index) => (
-                <TimelineCard key={index} {...item} delay={index * 0.1} />
-              ))}
-            </div>
+            {experiences.map((item, index) => (
+              <TimelineCard key={index} {...item} delay={index * 0.1} />
+            ))}
           </div>
         </div>
 
@@ -94,95 +141,31 @@ export default function Profil() {
             <div className="w-24 h-1 bg-[#9C824A] rounded-full opacity-40"></div>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-12 gap-4">
-            
-            <div className="md:col-span-8 bg-white/5 border border-[#9C824A]/20 p-8 rounded-2xl hover:border-[#9C824A]/60 transition-all group">
-              <div className="flex justify-between items-start mb-6">
-                <Server className="text-[#9C824A]" size={32} />
-                <h4 className="text-white font-bold uppercase text-lg tracking-widest">Développement Web</h4>
-              </div>
-              <div className="flex flex-wrap gap-2">
-                {["HTML", "CSS", "JavaScript", "PHP", "Symfony", "Laravel", "React.js", "Node.js", "Tailwind", "FastAPI", "Figma"].map(s => (
-                  <span key={s} className="px-3 py-1 bg-[#9C824A]/10 border border-[#9C824A]/30 rounded-full text-[10px] text-white font-sans">{s}</span>
-                ))}
-              </div>
-            </div>
-
-            <div className="md:col-span-4 bg-white/5 border border-[#9C824A]/20 p-8 rounded-2xl hover:border-[#9C824A]/60 transition-all">
-              <div className="flex items-center gap-3 mb-6 text-[#9C824A]">
-                <Languages size={24} />
-                <h4 className="text-white font-bold uppercase text-sm tracking-widest">Langues</h4>
-              </div>
-              <ul className="space-y-3">
-                <li className="flex justify-between text-[11px] font-sans">
-                  <span className="text-white/60">Anglais</span>
-                  <span className="text-[#9C824A] font-bold">C1 (TOEIC: 950)</span>
-                </li>
-                <li className="flex justify-between text-[11px] font-sans">
-                  <span className="text-white/60">Espagnol</span>
-                  <span className="text-[#9C824A] font-bold">B1</span>
-                </li>
-                <li className="flex justify-between text-[11px] font-sans">
-                  <span className="text-white/60">Portugais</span>
-                  <span className="text-[#9C824A] font-bold">Bilingue</span>
-                </li>
-              </ul>
-            </div>
-
-            <div className="md:col-span-4 bg-white/5 border border-[#9C824A]/20 p-8 rounded-2xl hover:border-[#9C824A]/60 transition-all">
-              <div className="flex items-center gap-3 mb-6 text-[#9C824A]">
-                <Smartphone size={24} />
-                <h4 className="text-white font-bold uppercase text-sm tracking-widest">Dev Logiciel & Mobile</h4>
-              </div>
-              <div className="flex flex-wrap gap-2">
-                {["Python", "Java", "C#", "Flutter", "Dart", "C"].map(s => (
-                  <span key={s} className="px-2 py-1 bg-white/5 border border-white/10 rounded text-[9px] text-white/70 font-sans">{s}</span>
-                ))}
-              </div>
-            </div>
-
-            <div className="md:col-span-4 bg-white/5 border border-[#9C824A]/20 p-8 rounded-2xl hover:border-[#9C824A]/60 transition-all">
-              <div className="flex items-center gap-3 mb-6 text-[#9C824A]">
-                <Cpu size={24} />
-                <h4 className="text-white font-bold uppercase text-sm tracking-widest">Data Science</h4>
-              </div>
-              <div className="flex flex-wrap gap-2">
-                {["Langage R", "ACP", "Clustering", "Pandas", "Matplotlib"].map(s => (
-                  <span key={s} className="px-2 py-1 bg-white/10 text-[9px] text-white/80 font-sans rounded">{s}</span>
-                ))}
-              </div>
-            </div>
-
-            <div className="md:col-span-4 bg-[#9C824A]/5 border border-[#9C824A]/30 p-8 rounded-2xl hover:bg-[#9C824A]/10 transition-all">
-              <div className="flex items-center gap-3 mb-6 text-[#9C824A]">
-                <ShieldCheck size={24} />
-                <h4 className="text-white font-bold uppercase text-sm tracking-widest">DevOps & BDD</h4>
-              </div>
-              <div className="grid grid-cols-2 gap-y-2 text-[9px] uppercase text-white/50 font-sans tracking-tight">
-                <span>MySQL</span><span>PostgreSQL</span><span>Docker</span><span>Jenkins</span><span>Git</span><span>Linux</span>
-              </div>
-            </div>
-
-            <div className="md:col-span-6 bg-white/5 border border-[#9C824A]/20 p-8 rounded-2xl hover:border-[#9C824A]/60 transition-all">
-              <div className="flex items-center gap-3 mb-4 text-[#9C824A]">
-                <Settings size={24} />
-                <h4 className="text-white font-bold uppercase text-sm tracking-widest">Transverses & Gestion</h4>
-              </div>
-              <div className="flex flex-wrap gap-x-4 gap-y-2 text-[10px] uppercase text-white/60 font-sans">
-                <span>Méthode Agile</span><span>Trello</span><span>Klaxoon</span><span>Gantt</span><span>Droit des contrats</span>
-              </div>
-            </div>
-
-            <div className="md:col-span-6 bg-white/5 border border-[#9C824A]/20 p-8 rounded-2xl hover:border-[#9C824A]/60 transition-all">
-              <div className="flex items-center gap-3 mb-4 text-[#9C824A]">
-                <UserCheck size={24} />
-                <h4 className="text-white font-bold uppercase text-sm tracking-widest">Soft Skills</h4>
-              </div>
-              <div className="flex flex-wrap gap-x-4 gap-y-2 text-[10px] uppercase text-[#9C824A] font-bold">
-                <span>Adaptabilité</span><span>Rigueur</span><span>Organisation</span><span>Résilience</span>
-              </div>
-            </div>
-
+          <div className="grid grid-cols-1 md:grid-cols-12 gap-4 auto-rows-fr">
+            {skillGroups.map((group, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: index * 0.05 }}
+                className={`${group.size} bg-white/5 border border-[#9C824A]/20 p-6 rounded-2xl hover:border-[#9C824A]/60 transition-all group flex flex-col justify-between`}
+              >
+                <div className="flex justify-between items-start mb-6">
+                  <div className="text-[#9C824A] group-hover:scale-110 transition-transform">
+                    {group.icon}
+                  </div>
+                  <h4 className="text-white font-bold uppercase text-[10px] md:text-xs tracking-widest">{group.title}</h4>
+                </div>
+                <div className="flex flex-wrap gap-2">
+                  {group.skills.map(s => (
+                    <span key={s} className="px-2.5 py-1 bg-[#9C824A]/10 border border-[#9C824A]/30 rounded-full text-[9px] text-white/80 font-sans">
+                      {s}
+                    </span>
+                  ))}
+                </div>
+              </motion.div>
+            ))}
           </div>
         </div>
 
