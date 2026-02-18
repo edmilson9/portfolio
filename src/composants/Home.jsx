@@ -79,16 +79,16 @@ export default function Home() {
             initial={{ y: 20, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl font-bold uppercase tracking-tight text-transparent bg-clip-text bg-gradient-to-b from-[#9C824A] via-[#F7E7CE] to-[#806834] mb-2"
+            className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold uppercase tracking-tight text-white"
           >
              {infos.nom}
           </motion.h1>
           
           <motion.h2 
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
+            initial={{ y: 20, opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.8, delay: 0.4 }}
-            className="text-xs sm:text-sm md:text-lg lg:text-xl text-white font-sans font-light tracking-[0.3em] md:tracking-[0.6em] uppercase mb-6 md:mb-10 lg:mb-16"
+            className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold uppercase tracking-tight text-white mb-6 md:mb-8 lg:mb-12"
           >
              {infos.prenom}
           </motion.h2>
