@@ -112,7 +112,19 @@ export default function Profil() {
       </div>
 
       <div className="max-w-7xl mx-auto relative z-10">
-        
+          <motion.div 
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8 }}
+          className="text-center mb-16 md:mb-24"
+        >
+          <h2 className="text-3xl md:text-6xl font-bold uppercase tracking-widest text-transparent bg-clip-text bg-gradient-to-b from-[#9C824A] to-[#604d25]">
+            Parcours
+          </h2>
+          <div className="w-16 md:w-24 h-1 bg-[#9C824A] mx-auto mt-4 rounded-full opacity-60"></div>
+          <p className="mt-4 text-white/50 font-sans text-xs md:text-sm tracking-widest uppercase">Formations & Expériences</p>
+        </motion.div>
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 mb-32">
           <div>
             <div className="flex items-center gap-4 mb-12 border-b border-[#9C824A]/20 pb-4">
@@ -137,7 +149,7 @@ export default function Profil() {
 
         <div className="mb-24">
           <div className="flex flex-col items-center mb-16 text-center">
-            <h3 className="text-3xl md:text-5xl font-bold uppercase tracking-[0.2em] text-white mb-4">Expertise Technique</h3>
+            <h3 className="text-3xl md:text-5xl font-bold uppercase tracking-[0.2em] text-white mb-4">Compétences</h3>
             <div className="w-24 h-1 bg-[#9C824A] rounded-full opacity-40"></div>
           </div>
 
