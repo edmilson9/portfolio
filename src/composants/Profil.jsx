@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { GraduationCap, Briefcase, Code, Database, Server, Terminal, ShieldCheck, Languages, UserCheck, Settings, Cpu } from "lucide-react";
+import { GraduationCap, Briefcase, Code, Database, Server, Terminal, ShieldCheck, Languages, Settings, Cpu } from "lucide-react";
 import TimelineCard from "../ui/TimelineCard"; 
 import GoldBackground from "../animation/GoldBackground";
 
