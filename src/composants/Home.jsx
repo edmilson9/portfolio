@@ -63,7 +63,6 @@ export default function Home() {
           </div>
           <div className="flex justify-between uppercase text-[8px] md:text-xs tracking-[0.2em] md:tracking-[0.3em] font-sans text-white/40">
              <span>{infos.lieu}</span>
-             <span className="hidden sm:inline">Ref: APP-SOFTWARE-26</span>
           </div>
        </motion.div>
 
