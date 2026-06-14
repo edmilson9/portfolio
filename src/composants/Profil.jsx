@@ -11,7 +11,7 @@ export default function Profil() {
       annee: "Oct. 2024 - Août 2026",
       titre: "BUT Informatique",
       lieu: "IUT de Villetaneuse",
-      desc: "Réalisation d'applications : conception, développement, validation."
+      desc: "Parcours Réalisation d'applications : conception, développement, validation."
     },
     {
       annee: "2022 - 2024",
@@ -35,22 +35,28 @@ export default function Profil() {
 
   const experiences = [
     {
+      annee: "Mai 2026 - Juillet 2026",
+      titre: "Stage Développeur Fullstack",
+      lieu: "PLANETO COACH SPORT SAS, Varilhes (09120)",
+      desc: "Conception de l'Admin Cockpit et optimisation du CRM commercial : ingénierie logicielle de pipelines asynchrones d'importation de masse (fichiers .xlsx), traitement algorithmique de normalisation, scoring de qualité (data_quality_score) et déduplication intelligente par empreintes composites uniques. Stack : React, Node.js, Tailwind, Resend."
+    },
+    {
       annee: "Juillet 2025 - Août 2025",
       titre: "Stage Développeur Fullstack",
       lieu: "E-petit pas, Argenteuil",
-      desc: "Développement d'un espace entreprises : modules d'inscription, publication d'offres, devis, facturation et paiement via API PayPal. Stack : React.js, Node.js, Tailwind, Prisma, Supabase."
+      desc: "Développement d'un espace entreprises : modules d'inscription, publication d'offres, devis, facturation et paiement via l'API PayPal. Stack : React.js, Node.js, Tailwind, Prisma, Supabase, JWT."
     },
     {
       annee: "Depuis Octobre 2024",
       titre: "Équipier Commercial",
       lieu: "ALDI, Paris (75007)",
-      desc: "Gestion de stock, encaissement, accueil et renseignement client."
+      desc: "Job étudiant (10h/semaine). Gestion de stock, encaissement, accueil et renseignement client."
     },
     {
       annee: "Août 2023 - Août 2024",
       titre: "Équipier Polyvalent",
       lieu: "McDonald's, Paris (75007)",
-      desc: "Job étudiant."
+      desc: "Job étudiant (16h/semaine)."
     }
   ];
 
@@ -64,7 +70,7 @@ export default function Profil() {
     {
       title: "Développement Logiciel",
       icon: <Code size={24} />,
-      skills: ["Python", "Java (Servlets, JSP)", "C#", "C", "Flutter", "Dart"],
+      skills: ["Python", "Java (Servlets, JSP, Beans)", "C#", "C", "Flutter", "Dart"],
       size: "md:col-span-4"
     },
     {
@@ -74,45 +80,46 @@ export default function Profil() {
       size: "md:col-span-4"
     },
     {
-      title: "DevOps",
+      title: "DevOps & Tests",
       icon: <ShieldCheck size={24} />,
-      skills: ["Git", "Docker", "Jenkins", "Linux", "Pytest", "Cypress"],
+      skills: ["Git", "Docker", "Jenkins", "Linux", "Windows", "Pytest", "Cypress", "Postman", "JUnit"],
       size: "md:col-span-4"
     },
     {
       title: "Base de données",
       icon: <Database size={24} />,
-      skills: ["MySQL", "PostgreSQL", "MongoDB", "Supabase", "Prisma", "UML"],
+      skills: ["MySQL", "PostgreSQL", "MongoDB", "Supabase", "Prisma", "UML", "MariaDB", "Redis"],
       size: "md:col-span-4"
     },
     {
-      title: "Langues",
+      title: "Qualité Logicielle",
+      icon: <Terminal size={24} />,
+      skills: ["Clean code", "SOLID", "TDD", "Designs patterns", "Refactoring"],
+      size: "md:col-span-4"
+    },
+    {
+      title: "Langues & Transverses",
       icon: <Languages size={24} />,
-      skills: ["Anglais (C1 TOEIC: 950)", "Portugais (Bilingue)", "Espagnol (B1)"],
+      skills: ["Anglais (C1 TOEIC: 950)", "Espagnol (B1)", "Droit des contrats"],
       size: "md:col-span-4"
     },
     {
-      title: "Transverses",
+      title: "Gestion de projet & Softs",
       icon: <Settings size={24} />,
-      skills: ["Agile", "Trello", "Klaxoon", "Gantt", "Droit des contrats"],
-      size: "md:col-span-4"
-    },
-    {
-      title: "Soft Skills",
-      icon: <UserCheck size={24} />,
-      skills: ["Adaptabilité", "Rigueur", "Organisation", "Résilience"],
+      skills: ["Méthode Agile", "Trello", "Klaxoon", "Gantt", "Adaptabilité", "Rigueur", "Organisation", "Résilience"],
       size: "md:col-span-4"
     }
   ];
 
   return (
-    <section id="profil" className="w-full min-h-screen bg-[#0F0F10] text-[#9C824A] py-12 md:py-24 px-4 md:px-8 font-serif relative overflow-x-hidden">
+    <section id="profil" className="w-full min-h-screen bg-[#0B111E] text-[#9C824A] py-12 md:py-24 px-4 md:px-8 font-serif relative overflow-x-hidden">
       <div className="absolute inset-0 w-full h-full z-0 opacity-20 rotate-180 pointer-events-none mix-blend-screen">
          <GoldBackground />
       </div>
 
       <div className="max-w-7xl mx-auto relative z-10">
-          <motion.div 
+        
+        <motion.div 
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -123,17 +130,20 @@ export default function Profil() {
             Parcours
           </h2>
           <div className="w-16 md:w-24 h-1 bg-[#9C824A] mx-auto mt-4 rounded-full opacity-60"></div>
-          <p className="mt-4 text-white/50 font-sans text-xs md:text-sm tracking-widest uppercase">Formations & Expériences</p>
+          <p className="mt-4 text-white/50 font-sans text-xs md:text-sm tracking-widest uppercase">Formation & Expérience</p>
         </motion.div>
+
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 mb-32">
           <div>
             <div className="flex items-center gap-4 mb-12 border-b border-[#9C824A]/20 pb-4">
               <GraduationCap size={28} />
               <h3 className="text-xl md:text-2xl font-bold uppercase tracking-[0.2em] text-white">Académique</h3>
             </div>
-            {formations.map((item, index) => (
-              <TimelineCard key={index} {...item} delay={index * 0.1} />
-            ))}
+            <div className="space-y-2">
+              {formations.map((item, index) => (
+                <TimelineCard key={index} {...item} delay={index * 0.1} />
+              ))}
+            </div>
           </div>
 
           <div>
@@ -141,15 +151,17 @@ export default function Profil() {
               <Briefcase size={28} />
               <h3 className="text-xl md:text-2xl font-bold uppercase tracking-[0.2em] text-white">Professionnel</h3>
             </div>
-            {experiences.map((item, index) => (
-              <TimelineCard key={index} {...item} delay={index * 0.1} />
-            ))}
+            <div className="space-y-2">
+              {experiences.map((item, index) => (
+                <TimelineCard key={index} {...item} delay={index * 0.1} />
+              ))}
+            </div>
           </div>
         </div>
 
         <div className="mb-24">
           <div className="flex flex-col items-center mb-16 text-center">
-            <h3 className="text-3xl md:text-5xl font-bold uppercase tracking-[0.2em] text-white mb-4">Compétences</h3>
+            <h3 className="text-3xl md:text-5xl font-bold uppercase tracking-[0.2em] text-white mb-4"> Compétences </h3>
             <div className="w-24 h-1 bg-[#9C824A] rounded-full opacity-40"></div>
           </div>
 

@@ -2,30 +2,31 @@ import React from "react";
 import { motion } from "framer-motion";
 import { ChevronRight, Cpu, Database, Layout, Github, Linkedin, Mail } from "lucide-react";
 import GoldBackground from "../animation/GoldBackground"; 
-import CV_PATH from '../assets/cv_Edmilson_DA_COSTA_SA_stage.pdf'; 
 
 export default function Home() {
   
   const infos = {
     nom: "EDMILSON",
     prenom: "DA COSTA SA",
-    poste: "futur ingénieur IOT", 
-    dispo: "9 MARS 2026",
-    duree: "14 à 16 SEMAINES",
+    poste: "Développeur logiciel orienté data", 
+    dispo: "SEPTEMBRE 2026",
+    duree: "24 MOIS EN ALTERNANCE",
     lieu: "VILLEJUIF (94)",
-    accroche: "étudiant en troisième année de but informatique à l'iut de villetaneuse, je suis à la recherche d'un stage en développement logiciel ",
+    accroche: "Étudiant en BUT Informatique à l'IUT de Villetaneuse, je recherche un contrat d'apprentissage pour m'investir pleinement dans vos défis techniques.",
     linkedin: "https://www.linkedin.com/in/edmilson-da-costa-sa-7471a5202",
     github:"https://github.com/edmilson9",
     email : "edmilson.sadacosta@gmail.com"
   };
 
   return (
-    <section id="home" className="w-full h-auto min-h-[100dvh] bg-[#0F0F10] text-[#9C824A] flex flex-col justify-center items-center relative overflow-x-hidden overflow-y-auto font-serif py-20 lg:py-0">
+    <section id="home" className="w-full h-auto min-h-[100dvh] bg-[#0B111E] text-[#9C824A] flex flex-col justify-center items-center relative overflow-x-hidden overflow-y-auto font-serif py-20 lg:py-0">
        
-       <GoldBackground />
+       <div className="absolute inset-0 pointer-events-none mix-blend-screen opacity-50">
+          <GoldBackground />
+       </div>
 
        <div className="absolute top-4 right-4 md:top-8 md:right-10 z-50 flex flex-col items-end gap-2 md:gap-4">
-          <div className="flex gap-3 md:gap-4 bg-[#0F0F10]/80 backdrop-blur-md p-1.5 rounded-lg border border-[#9C824A]/20 shadow-lg">
+          <div className="flex gap-3 md:gap-4 bg-[#0B111E]/80 backdrop-blur-md p-1.5 rounded-lg border border-[#9C824A]/20 shadow-lg">
             <motion.a 
               whileHover={{ color: "#fff", x: -5 }}
               href={`mailto:${infos.email}`}
@@ -62,7 +63,7 @@ export default function Home() {
           </div>
           <div className="flex justify-between uppercase text-[8px] md:text-xs tracking-[0.2em] md:tracking-[0.3em] font-sans text-white/40">
              <span>{infos.lieu}</span>
-             <span className="hidden sm:inline">Ref: FULLSTACK-IOT-26</span>
+             <span className="hidden sm:inline">Ref: APP-SOFTWARE-26</span>
           </div>
        </motion.div>
 
@@ -97,25 +98,25 @@ export default function Home() {
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.5, duration: 1 }}
-            className="flex flex-wrap justify-center gap-6 md:gap-12 lg:gap-24 mb-8 md:mb-10 lg:mb-16 text-white/60 font-sans text-[8px] md:text-[10px] uppercase tracking-[0.2em]"
+            className="flex flex-wrap justify-center gap-6 md:gap-12 lg:gap-20 mb-8 md:mb-10 lg:mb-14 text-white/60 font-sans text-[8px] md:text-[10px] uppercase tracking-[0.2em]"
           >
              <div className="flex flex-col items-center gap-2 md:gap-4 group">
-                <div className="p-3 md:p-4 border border-[#9C824A]/20 rounded-full group-hover:border-[#9C824A]/60 transition-all duration-500 bg-[#0F0F10]/40 backdrop-blur-sm">
-                    <Layout className="w-6 h-6 md:w-8 md:h-8 lg:w-[52px] lg:h-[52px] text-[#9C824A]"/>
+                <div className="p-3 md:p-4 border border-[#9C824A]/20 rounded-full group-hover:border-[#9C824A]/60 transition-all duration-500 bg-[#0B111E]/40 backdrop-blur-sm">
+                    <Layout className="w-5 h-5 md:w-7 md:h-7 lg:w-[42px] lg:h-[42px] text-[#9C824A]"/>
                 </div>
-                <span className="font-semibold">Dev Web</span>
+                <span className="font-semibold">Dev Web / Fullstack</span>
              </div>
              <div className="flex flex-col items-center gap-2 md:gap-4 group">
-                <div className="p-3 md:p-4 border border-[#9C824A]/20 rounded-full group-hover:border-[#9C824A]/60 transition-all duration-500 bg-[#0F0F10]/40 backdrop-blur-sm">
-                    <Database className="w-6 h-6 md:w-8 md:h-8 lg:w-[52px] lg:h-[52px] text-[#9C824A]"/>
+                <div className="p-3 md:p-4 border border-[#9C824A]/20 rounded-full group-hover:border-[#9C824A]/60 transition-all duration-500 bg-[#0B111E]/40 backdrop-blur-sm">
+                    <Database className="w-5 h-5 md:w-7 md:h-7 lg:w-[42px] lg:h-[42px] text-[#9C824A]"/>
                 </div>
-                <span className="font-semibold">Data</span>
+                <span className="font-semibold">Data Science & BDD</span>
              </div>
              <div className="flex flex-col items-center gap-2 md:gap-4 group">
-                <div className="p-3 md:p-4 border border-[#9C824A]/20 rounded-full group-hover:border-[#9C824A]/60 transition-all duration-500 bg-[#0F0F10]/40 backdrop-blur-sm">
-                    <Cpu className="w-6 h-6 md:w-8 md:h-8 lg:w-[52px] lg:h-[52px] text-[#9C824A]"/>
+                <div className="p-3 md:p-4 border border-[#9C824A]/20 rounded-full group-hover:border-[#9C824A]/60 transition-all duration-500 bg-[#0B111E]/40 backdrop-blur-sm">
+                    <Cpu className="w-5 h-5 md:w-7 md:h-7 lg:w-[42px] lg:h-[42px] text-[#9C824A]"/>
                 </div>
-                <span className="font-semibold">IoT</span>
+                <span className="font-semibold">Logiciel & DevOps</span>
              </div>
           </motion.div>
 
@@ -126,7 +127,7 @@ export default function Home() {
             className="font-sans text-[10px] md:text-xs lg:text-sm text-[#9C824A]/80 uppercase tracking-widest mb-8 md:mb-10 lg:mb-12 max-w-2xl mx-auto leading-relaxed px-4"
           >
              {infos.poste} <br/> 
-             <span className="text-white">A la recherche d'un stage à partir du {infos.dispo}</span> pour une durée de {infos.duree} <br/>
+             <span className="text-white">À la recherche d'une alternance à partir de {infos.dispo}</span> pour une durée de {infos.duree} <br/>
              <span className="italic mt-2 block opacity-80 normal-case tracking-normal">{infos.accroche}</span>
           </motion.p>
 
@@ -137,14 +138,14 @@ export default function Home() {
             className="flex flex-col sm:flex-row gap-4 md:gap-6 justify-center items-center font-sans w-full px-8 pb-8"
           >
              <a 
-               href="#projets" 
-               className="w-full sm:w-auto text-[#9C824A] border border-[#9C824A] px-6 md:px-10 py-3 md:py-4 font-bold uppercase tracking-widest hover:text-white hover:border-white transition-colors duration-500 flex justify-center items-center gap-2 text-[10px] md:text-xs bg-[#0F0F10]/50 backdrop-blur-sm"
+               href="#profil" 
+               className="w-full sm:w-auto text-[#9C824A] border border-[#9C824A] px-6 md:px-10 py-3 md:py-4 font-bold uppercase tracking-widest hover:text-white hover:border-white transition-colors duration-500 flex justify-center items-center gap-2 text-[10px] md:text-xs bg-[#0B111E]/50 backdrop-blur-sm"
              >
                 Voir le Profil <ChevronRight size={16} />
              </a>
              <a 
                href="#projets" 
-               className="w-full sm:w-auto text-[#9C824A] border border-[#9C824A] px-6 md:px-10 py-3 md:py-4 font-bold uppercase tracking-widest hover:text-white hover:border-white transition-colors duration-500 flex justify-center items-center gap-2 text-[10px] md:text-xs bg-[#0F0F10]/50 backdrop-blur-sm"
+               className="w-full sm:w-auto text-[#9C824A] border border-[#9C824A] px-6 md:px-10 py-3 md:py-4 font-bold uppercase tracking-widest hover:text-white hover:border-white transition-colors duration-500 flex justify-center items-center gap-2 text-[10px] md:text-xs bg-[#0B111E]/50 backdrop-blur-sm"
              >
                 Voir les Projets <ChevronRight size={16} />
              </a>
